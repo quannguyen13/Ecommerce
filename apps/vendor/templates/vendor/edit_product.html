@@ -1,17 +1,18 @@
 {% extends 'core/base.html' %}
 
-{% block title %}Edit product | {% endblock %}
+{% block title %}Edit Product | {% endblock %}
 
 {% block content %}
 
 
-    <h1 class="title">Edit product</h1>
+    <h1 class="title">Edit Product</h1>
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %} {{ form.as_p }}
-
-        <div class="field">
+        <br>
+        <div class="field" style="text-align: center;">
             <div class="control">
-                <button class="btn btn-danger is-uppercase">Save Changes</button>
+                <button class="button is-success">Save</button>
+                <button class="button is-danger" onclick="javascript:history.go(-1);">Cancel</button>
             </div>
         </div>
     </form>

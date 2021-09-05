@@ -3,17 +3,31 @@
 {% block title %}add product | {% endblock %}
 
 {% block content %}
-
-    <h1 class="title">add product</h1>
-    <form method="post" action="." enctype="multipart/form-data">
-        {% csrf_token %}
-
-        {{ form.as_p }}
-
-        <div class="field">
-            <div class="control">
-                <button class="btn btn-danger is-uppercase">Submit</button>
-            </div>
-        </div>
-    </form>
+<h1 class="title" style="text-align: center;">Add An Item</h1>
+<div class="offet-3 col-md-6 label" style="
+display: flex;
+flex-direction: column;
+max-width: 80em;">
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        {% for field in form %}
+        <label>
+            <br>
+            {{field.label_tag}}
+            <br>
+        </label>
+        {{field}}
+        {% endfor %}
+    </div>
+    
+</div>
+<br>
+<div class="field">
+    <div class="control" style="text-align: center;">
+        <button class="button is-primary">Submit</button>
+        <button class="button is-danger" onclick="javascript:history.go(-1);">Cancel</button>
+    </div>
+</div>
+</form>
 {% endblock %}

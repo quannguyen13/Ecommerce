@@ -3,16 +3,42 @@
 {% block title %}Log in | {% endblock %}
 
 {% block content %}
-    <h1 class="title">Log in</h1>
-    <form method="post" action=".">
+
+    <h1 class="title" style="text-align: center;">Log in</h1>
+    <form method="post">
         {% csrf_token %}
 
-        {{ form.as_p }}
-
+        <div class="form-group" style=
+        "text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        ">
+            {% for field in form %}
+            <label class="label">
+                
+                <br>
+                {{field.label_tag}}
+                <br>
+                
+            </label>
+            {{field}}
+            {% endfor %}
+        
+        <br>
         <div class="field">
             <div class="control">
-                <button class="btn btn-danger is-uppercase">Log in</button>
+                <button class="button is-link">Log In</button>
+                <button class="button is-danger" onclick="javascript:history.go(-1);">Cancel</button>
             </div>
         </div>
+            <div>
+                <br>
+                <p>No Account?<a href="{% url 'become_vendor' %}"> Sign Up</a>
+                </p>
+            </div>
+        </div>
+    </div>
     </form>
 {% endblock %}

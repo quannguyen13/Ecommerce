@@ -1,0 +1,18 @@
+material design:
+
+<link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/gh/tronic247/material/dist/css/material.min.css" rel="stylesheet" />
+
+    <br>
+    <div class="control">
+        <input type=button class="button is-danger is-fullwidth" value="Cancel" onClick="javascript:history.go(-1);">
+    </div>
+
+
+
+style="background-color: rgb(132,2,71); color: aliceblue;"
+
+
+ <a href="{% url 'contact' %}" class="navbar-item">Contact</a>
+                <a href="{% url 'login' %}" class="navbar-item">Log In</a>
+                <a href="{% url 'cart' %}" class="navbar-item">Cart{% if cart %} ({{ cart|length }}){% endif %}</a>

@@ -24,8 +24,8 @@
 * Bulma overrides
 */
 
-.input, .button {
-    border-radius: 0;
+.input, .button, .textarea {
+    border-radius: 10px;
 }
 
 /**
@@ -63,9 +63,64 @@
  * Product list item
  */
 
+
+#dealer{
+
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.field  #mobile{
+    text-align: center;
+}
+
  .product-list-item .box .subtitle {
     margin-bottom: 0;
 }
 .product-list-item .box .price {
     color: #888;
 }
+
+@media screen and (max-width: 950px){
+    .field  #mobile{
+    text-align: center;
+}
+    input{
+    width: 55vw;
+}
+
+}
+
+
+
+@media screen and (min-width: 955px){
+    .field  #mobile{
+    text-align: center;
+}
+    input{
+    width: 30vw;
+}
+}
+
+@media screen and (min-width: 1875px){
+    .field  #mobile{
+    text-align: center;
+}
+    input{
+    width: 15vw;
+}
+}
+
+
+.box{
+    transition: box-shadow .5s;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.box:hover {
+    box-shadow: 0 0 11px rgba(10, 19, 42, 0.897); 
+  }
+

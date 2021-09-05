@@ -5,28 +5,29 @@
 
 {% block content %}
 
-<!-- <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" /> -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
-
-
-
-
-
-<h1 class="title">Become vendor</h1>
+<!-- <div style="background-color: black; padding: 20px 55px;"> -->
+ <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<div id="dealer">
+<h1 class="title">Become A Dealer</h1>
     <form method="post">
         {% csrf_token %}
-
-        {{ form.as_p }}
-
+    <table>
+        {{ form.as_table }}
+    </table>
+    <!-- {{form.as_ul}} -->
+    <br>
         <div class="field">
-            <div class="control">
-                <button class="btn btn-success is-uppercase">Sign up</button>
+            <div id="mobile">
+                <button class="button is-link is-uppercase">Sign Up</button>
+                <button class="button is-danger" onclick="javascript:history.go(-1);">Cancel</button>
             </div>
         </div>
     </form>
     <hr>
     <h2 class="subtitle">Already have an account?</h2>
 
-    <a href="{% url 'login' %}">Log in</a>
+    <a href="{% url 'login' %}" style="font-size: 25px; font-weight: bold;">Log In</a>
+</div>
+<!-- </div> -->
 {% endblock %}

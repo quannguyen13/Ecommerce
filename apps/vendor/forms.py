@@ -1,14 +1,20 @@
-from django.forms import ModelForm, fields
-
+from django.forms import ModelForm
+from django import forms
 from apps.product.models import Product
 
-class ProductForm(ModelForm):
+class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
-        fields = ['category', 'image', 'title', 'description', 'price']
+        fields = ['category', 'price', 'image', 'title', 'description']
 
 
-# class ProductImageForm(ModelForm):
-#     class Meta:
-#         model = ProductImage
-#         fields = ['image']
+        widgets = {
+        'category': forms.Select(attrs={'class': 'select control label'}),
+        'price': forms.NumberInput(attrs={'class': 'label input'}),
+        'title': forms.TextInput(attrs={'class': 'label input'}),
+        'image': forms.ClearableFileInput(attrs={'class': 'field label control'}),
+
+        'description': forms.Textarea(attrs={'class': 'label textarea'}),
+        
+        
+    }

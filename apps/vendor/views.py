@@ -4,9 +4,11 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import redirect, render, get_object_or_404
 from django.utils.text import slugify
+
 from .models import Vendor
 from apps.product.models import Product
 from .forms import ProductForm
+
 
 # Create your views here.
 def become_vendor(request):
@@ -63,11 +65,9 @@ def add_product(request):
             product.vendor = request.user.vendor
             product.slug = slugify(product.title)
             product.save()
-
             return redirect('vendor_admin')
     else:
         form = ProductForm()
-    
     return render(request, 'vendor/add_product.html', {'form': form})
 
 
@@ -141,4 +141,9 @@ def delete_vendor(request, pk):
 def delete_product(request, pk):
     Product.objects.get(pk=pk).delete()
     return redirect('vendor_admin')
+
+
+
+
+
 
