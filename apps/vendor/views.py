@@ -8,7 +8,7 @@ from django.utils.text import slugify
 from .models import Vendor
 from apps.product.models import Product
 from apps.order.models import Order
-from .forms import ProductForm
+from .forms import ProductForm, OrderForm
 
 
 # Create your views here.
@@ -100,6 +100,30 @@ def edit_product(request, pk):
         'form': form,
          'product': product,
         #   'image_form': image_form
+    })
+
+
+
+@login_required
+def edit_order(request, pk):
+    vendor = request.user.vendor
+    order = vendor.orders.get(pk=pk)
+
+    if request.method == 'POST':
+        form = OrderForm(request.POST, request.FILES, instance=order)
+
+
+        if form.is_valid():
+            form.save()
+
+            return redirect('vendor_admin')
+    else:
+        form = OrderForm(instance=order)
+
+
+    return render(request, 'vendor/edit_order.html', {
+        'form': form,
+         'order': order,
     })
 
 

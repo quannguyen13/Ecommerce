@@ -44,7 +44,7 @@
     </div>
 <div class="is-fullwidth">
     <div class="box">
-        <h2 class="is-size-3 mb-4">My orders</h2>
+        <h2 class="is-size-3 mb-4">My Customer(s)</h2>
         {% if orders %}
             {% for order in orders %}
                 <div class="{% if order.fully_paid %}has-background-success-light{% else %}has-background-info-light{% endif %} mb-2 p-4">
@@ -56,13 +56,15 @@
                         <div class="is-full-mobile">
                             <b>Name:</b> {{ order.first_name }} {{ order.last_name }}<br>
                             <b>Address:</b> {{ order.address }}<br>
-                            <b>Zip and place:</b> {{ order.zipcode }} {{ order.place }}<br>
-                            <b>E-mail:</b> {{ order.email }}<br>
+                            <b>City: </b>{{ order.city }}<br>
+                            <b>Zipcode: </b>{{ order.zipcode }}<br>
+                            <b>E-mail: </b> {{ order.email }}<br>
                             <b>Phone:</b> {{ order.phone }}<br>
                             <b>Date ordered:</b> {{ order.created_at }}
                             <br>
                             <br>
-                            <b><a href="{% url 'delete_order' order.pk %}"><h1 class="button is-danger is-small">Delete</h1></a></b>      
+                            <b><a href="{% url 'edit_order' order.pk %}"><h1 class="button is-link is-small is-uppercase" style="border-radius: 5px;">Edit</h1></a></b>      
+                            <b><a href="{% url 'delete_order' order.pk %}"><h1 class="button is-danger is-small is-uppercase" style="border-radius: 5px;">Delete</h1></a></b>      
 
     <div class="table-container">
                                     <table class="table is-fullwidth mt-4">
