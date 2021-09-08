@@ -3,8 +3,10 @@
 {% block title %}Cart | {% endblock %}
 
 {% block content %}
-    <h1 class="title">Cart</h1>
-
+<div style="text-align: center;">
+    <h1 class="title tag is is-white" style="font-size: 50px;border-radius: 15px;">Cart</h1>
+</div>
+<br>
     {% if cart %}
         <div class="box mb-6">
             <div class="table">
@@ -52,9 +54,9 @@
             </div>
         </div>
 
-        <h2 class="subtitle">Contact information</h2>
-
+        
         <form method="post" id="payment-form">
+            <h2 class="subtitle tag is-dark is-large">Contact information</h2>
             {% csrf_token %} {{ form.as_p }}
 
             {% if form.non_field_errors %}
@@ -151,7 +153,7 @@
             
             <div class="field">
                 <div class="control">
-                    <button class="button is-dark mt-4 is-uppercase">Checkout</button>
+                    <button class="button is-warning mt-4 is-uppercase">Checkout</button>
                 </div>
             </div>
         </div>

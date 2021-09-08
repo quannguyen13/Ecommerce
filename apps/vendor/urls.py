@@ -13,6 +13,7 @@ urlpatterns = [
     path('add-product/', views.add_product, name='add_product'),
     path('edit-product/<int:pk>', views.edit_product, name='edit_product'),
     path('delete-product/<int:pk>', views.delete_product, name='delete_product'),
+    path('delete-order/<int:pk>', views.delete_order, name='delete_order'),
 
 
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),

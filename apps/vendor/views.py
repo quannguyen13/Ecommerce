@@ -7,6 +7,7 @@ from django.utils.text import slugify
 
 from .models import Vendor
 from apps.product.models import Product
+from apps.order.models import Order
 from .forms import ProductForm
 
 
@@ -140,6 +141,14 @@ def delete_vendor(request, pk):
 @login_required
 def delete_product(request, pk):
     Product.objects.get(pk=pk).delete()
+    return redirect('vendor_admin')
+
+
+
+
+@login_required
+def delete_order(request, pk):
+    Order.objects.get(pk=pk).delete()
     return redirect('vendor_admin')
 
 

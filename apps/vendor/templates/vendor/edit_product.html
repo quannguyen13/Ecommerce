@@ -4,10 +4,21 @@
 
 {% block content %}
 
-
+<div class="box">
     <h1 class="title">Edit Product</h1>
     <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %} {{ form.as_p }}
+        {% csrf_token %}
+        
+        <div class="form-group">
+            {% for field in form %}
+            <label>
+                <br>
+                {{field.label_tag}}
+                <br>
+            </label>
+            {{field}}
+            {% endfor %}
+        </div>
         <br>
         <div class="field" style="text-align: center;">
             <div class="control">
@@ -29,4 +40,5 @@
             </div>
         </div>
     </form> -->
+</div>
 {% endblock %}

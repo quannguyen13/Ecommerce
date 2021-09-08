@@ -3,6 +3,7 @@
 {% block title %}Edit vendor | {% endblock %}
 
 {% block content %}
+<div class="box">
     <h1 class="title">Edit vendor</h1>
 
     <form method="post">
@@ -28,8 +29,10 @@
 
         <div class="field">
             <div class="control">
-                <button class="button is-dark is-uppercase">Save changes</button>
+                <button class="button is-success is-uppercase">Save</button>
+                <button class="button is-danger" onclick="javascript:history.go(-1);">Cancel</button>
             </div>
         </div>
     </form>
+</div>
 {% endblock %}

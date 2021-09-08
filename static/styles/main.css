@@ -2,14 +2,20 @@
 * Nav
 */
 
+  
 .navbar {
     text-transform: uppercase;
+    background-color: grey;
+}
+#main-navbar{
+    margin: 5px 20px;
 }
 
-    .navbar .is-dark {
-        background: #444;
-    }
 
+.nav-item
+strong{
+    margin-left: 200px;
+}
 /**
 * Footer 
 */
@@ -31,7 +37,9 @@
 /**
  * Product list item
  */
-
+.box{
+    border-radius: 15px;
+}
 .product-list-item .box #subtitle {
     margin-bottom: 5px;
 }
@@ -65,18 +73,19 @@
 
 
 #dealer{
-
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
 }
 .field  #mobile{
     text-align: center;
 }
 
- .product-list-item .box .subtitle {
+.product-list-item .box .subtitle {
     margin-bottom: 0;
 }
 .product-list-item .box .price {
@@ -91,7 +100,10 @@
     width: 55vw;
 }
 
+
 }
+
+
 
 
 
@@ -102,6 +114,7 @@
     input{
     width: 30vw;
 }
+
 }
 
 @media screen and (min-width: 1875px){
@@ -111,16 +124,62 @@
     input{
     width: 15vw;
 }
+    section {
+    max-width: .5vw
+}
 }
 
 
-.box{
+
+@media screen and (max-width: 377px){
+    .table-container,
+    td,
+    th{
+    font-size: 11px;
+}
+}
+
+
+.box1{
+
     transition: box-shadow .5s;
     border: 1px solid #ccc;
     background: #fff;
 }
 
-.box:hover {
-    box-shadow: 0 0 11px rgba(10, 19, 42, 0.897); 
+.box1:hover {
+    box-shadow: 0 0 11px 11px black; 
   }
 
+#body{
+    /* background: linear-gradient(to bottom, #780206, #061161); */
+    background-image: url('/static/background_images/a10_blueprint.jpg');
+}
+.fixx{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    overflow:hidden;
+
+}
+#noneBackground{
+    background-color: white;
+    border-radius: 15px;
+    max-width: 28rem;
+    padding: 20px;
+
+}
+.book{
+   background-color: white;
+   padding: 30px;
+   margin-bottom: 10px;
+   border-radius: 15px;
+}
+
+#payment-form{
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+}

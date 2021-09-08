@@ -1,9 +1,9 @@
 {% extends 'core/base.html' %}
 {% block title %}{product.title} | commercial web{% endblock %}
 {% block content %}
-<div id="productapp">
+<div id="productapp"  class="has-background-info-light" >
     {% if product.image %}
-    <figure class="image is-4by3 mb-6">
+    <figure class="image is-3by2 mb-6">
         <img src="{{ product.image.url }}">
         <!-- <img :src="mainImage.image"> -->
     </figure>
@@ -17,15 +17,21 @@
     </div>
 </div>
 {% endif %} -->
-<h1 class="title">{{ product.title }}, ${{ product.price }}</h1>
-<p class="mb-6"><span class="tag is-dark">{{ product.vendor.name }}</span></p>
-<p>{{ product.description }}</p>
+
+<div style="padding: 5px 40px 0 ; border-radius: 15px;">
+<h1 class="title"><span class="tag is-dark is-large">PRODUCT'S NAME:</span><br> {{ product.title }}</h1>
+<h1 class="title"><span class="tag is-dark is-large">PRICE:</span><br> ${{ product.price }}</h1>
+<h1 class="title"><span class="tag is-dark is-large">DEALER: </span><br> {{ product.vendor.name }}</h1>
+<h1 class="title"><span class="tag is-dark is-large">PRODUCT'S DESCRIPTION</span><br> {{ product.description }}</h1>
+
 <hr>
 {% if messages %}
 {% for message in messages %}
     <div class="notification is-success is-toast">{{ message }}</div>
 {% endfor %}
 {% endif %}
+</div>
+</div>
 
 <form method="POST">
     {% csrf_token %} {{ form.as_p }}
@@ -49,14 +55,15 @@
 <hr>
 <div class="columns is-multiline">
     <div class="column is-12">
-        <h2 class="subtitle">Similar products</h2>
+        <h2 class="subtitle has-background-info-light is-uppercase" style="padding: 20px; border-radius: 15px;font-weight: bold;">Similar products</h2>
     </div>
     {% for product in similar_products %}
         {% include 'product/parts/list_item.html' %}
     {% endfor %}
     </div>
     {% endif %}
-</div>
+
+
 {% endblock %}
 
 <!-- {% block scripts %}
