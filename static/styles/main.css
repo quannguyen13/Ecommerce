@@ -104,7 +104,7 @@ strong{
 }
 
 
-@media screen and (min-width: 955px){
+@media screen and (min-width: 700px){
     .field  #mobile{
     text-align: center;
 }
@@ -113,7 +113,7 @@ strong{
 }
 }
 
-@media screen and (min-width: 1875px){
+@media screen and (min-width: 1400px){
     .field  #mobile{
     text-align: center;
 }
@@ -141,47 +141,12 @@ strong{
     border: 1px solid #ccc;
     background: #fff;
 }
+#box2 {
+    box-shadow: 0 500px 5555px 5555px rgba(0, 0, 0, .7);
+}
 
 .box1:hover {
     box-shadow: 0 0 11px 11px black; 
-  }
-
-/* #body{ */
-    /* background: linear-gradient(to bottom, #780206, #061161); */
-    /* background-image: url('/static/background_images/a10_blueprint.jpg'); */
-    /* background-size: 200px 100px; */
-    /* background-size: 200px 100px; */
-/* } */
-
-#SLIDE_BG {
-    width: 100%;
-    height: 70vh;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* background-size: 200px 100px; */
-    backface-visibility: hidden;
-    animation: slideBg 35s linear infinite 0s;
-    animation-timing-function: ease-in-out;
-    background-image: '/static/background_images/a10_blueprint.jpg';
-
-}
-@keyframes slideBg {
-    0%{
-        background-image: url('/static/background_images/apache.jpg');
-    }
-    25%{
-        background-image: url('/static/background_images/b2.jpg');
-    }
-    50%{
-        background-image: url('/static/background_images/F-16V.jpeg');
-    }
-    75%{
-        background-image: url('/static/background_images/sr71-2.jpg');
-    }
-    100%{
-        background-image: url('/static/background_images/f-35.jpg');
-    }
 }
 
 .fixx{
@@ -211,4 +176,53 @@ strong{
     background-color: white;
     padding: 25px;
     border-radius: 15px;
+}
+
+#body {
+    width: 100%;
+    /* height: 70vh; */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    animation: slideBg 65s linear infinite 0s;
+    animation-timing-function: ease-in-out;
+    /* animation-timing-function: linear; */
+  
+   
+}
+@keyframes slideBg {
+    0%{
+        background-image: url('/static/background_images/apache.jpg');
+    }
+    10%{
+        background-image: url('/static/background_images/b2.jpg');
+    }
+    20%{
+        background-image: url('/static/background_images/F-16V.jpeg');
+    }
+    30%{
+        background-image: url('/static/background_images/sr71-2.jpg');
+    }
+    40%{
+        background-image: url('/static/background_images/f-35.jpg');
+    }
+    50%{
+        background-image: url('/static/background_images/sr71.jpg');
+    }
+    60%{
+        background-image: url('/static/background_images/a10_blueprint.jpg');
+    }
+    70%{
+        background-image: url('/static/background_images/266707.jpg');
+    }
+    80%{
+        background-image: url('/static/background_images/f16.jpg');
+    }
+    90%{
+        background-image: url('/static/background_images/b2.jpg');
+    }
+    100%{
+        background-image: url('/static/background_images/f-35.jpg');
+    }
 }
