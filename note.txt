@@ -26,3 +26,8 @@ style="background-color: rgb(132,2,71); color: aliceblue;"
     background-image: url('/static/background_images/a10_blueprint.jpg');
     background-size: 200px 100px;
 }
+
+
+
+
+web: gunicorn sale_django.wsgi

@@ -1,1 +1,2 @@
-web: gunicorn sale_django.wsgi
+web: gunicorn core.wsgi --log-file=-
+
