@@ -69,7 +69,9 @@ def add_product(request):
             return redirect('vendor_admin')
     else:
         form = ProductForm()
-    return render(request, 'vendor/add_product.html', {'form': form})
+    return render(request, 'vendor/add_product.html', {
+        'form': form,
+        })
 
 
 @login_required
