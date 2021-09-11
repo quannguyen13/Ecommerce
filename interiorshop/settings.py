@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+import os
+import dj_database_url
 
 from pathlib import Path
 
@@ -20,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-2-kbnojvqg*2@u3wz0dd*!3ax=&$l=6syoez8p43dabgs0_v)x'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True if os.environ['MODE'] == 'dev' else False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 STRIPE_PUB_KEY = 'pk_test_51JV3ujFfBqRyzTeN3OyliIwLTKtg16WW8oUFOjxfuBgs5cV7sg2lOdCMfebRuihV2btUWEaUX5UwILybsMLt7MM200VXorUe0W'
 STRIPE_SECRET_KEY = 'sk_test_51JV3ujFfBqRyzTeN5MADL2Gc5WrTMwBYjxoNk4KEjrQygi0Qe8ND8PnCvjJ0donoqc4jzZWpv7QsbJ5qHkExakcL00OKRj6fFA'
 
@@ -43,18 +45,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "bootstrap5",
-    'materializecssform',
     'apps.core',
     'apps.vendor',
     'apps.product',
     'apps.cart',
     'apps.order',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -63,6 +66,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'interiorshop.urls'
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 TEMPLATES = [
     {
@@ -95,13 +100,14 @@ WSGI_APPLICATION = 'interiorshop.wsgi.application'
 #     }
 # }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sale',
-        'USER': 'saleuser',
-        'PASSWORD': 'sale',
-        'HOST': 'localhost'
-    }
+    'default': dj_database_url.config(conn_max_age=600)
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'sale',
+    #     'USER': 'saleuser',
+    #     'PASSWORD': 'sale',
+    #     'HOST': 'localhost'
+    # }
 }
 
 
@@ -141,6 +147,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+# STATIC_URL = os.path.join(BASE_DIR, '/static/')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [

@@ -1,0 +1,1 @@
+web: gunicorn sale_django.wsgi

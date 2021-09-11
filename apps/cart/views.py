@@ -30,9 +30,9 @@ def cart_detail(request):
             phone = form.cleaned_data['phone']
             address = form.cleaned_data['address']
             zipcode = form.cleaned_data['zipcode']
-            place = form.cleaned_data['place']
+            city = form.cleaned_data['city']
             
-            order = checkout(request, first_name, last_name, email, address, zipcode, place, phone, cart.get_total_cost())
+            order = checkout(request, first_name, last_name, email, address, zipcode, city, phone, cart.get_total_cost())
 
             cart.clear()
 
