@@ -30,4 +30,3 @@ style="background-color: rgb(132,2,71); color: aliceblue;"
 
 
 
-web: gunicorn sale_django.wsgi
