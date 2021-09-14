@@ -25,7 +25,8 @@ print(BASE_DIR)
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if os.environ['MODE'] == 'dev' else False
+# DEBUG = True if os.environ['MODE'] == 'dev' else False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 STRIPE_PUB_KEY = 'pk_test_51JV3ujFfBqRyzTeN3OyliIwLTKtg16WW8oUFOjxfuBgs5cV7sg2lOdCMfebRuihV2btUWEaUX5UwILybsMLt7MM200VXorUe0W'
@@ -51,6 +52,7 @@ INSTALLED_APPS = [
     'apps.cart',
     'apps.order',
     'corsheaders',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -147,16 +149,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 STATIC_URL = '/static/'
 
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static/'),
-# )
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+AWS_ACCESS_KEY_ID = 'AKIAYWY76Y26NB32ETX5'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'quan-enterprise'
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
