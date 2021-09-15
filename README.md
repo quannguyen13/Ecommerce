@@ -1,5 +1,8 @@
 # Welcome to my e-commerce app project
 This e-commerce application is useable in destop version and mobile
+# What in here.
+User able to Create, Read, Update, Delete any produts.
+Buy, Sale...simple
 # Features
 * Four templates with full CRUDabilities.
 * Full featured shopping cart.
@@ -14,13 +17,21 @@ This e-commerce application is useable in destop version and mobile
 * Django.
 * Bulma CSS helper.
 * SQL database.
-# Destop Version View
-<img src=https://i.imgur.com/MkndHq2.png width=800>
+#
+<img src=https://i.imgur.com/pDlXdij.png width=800>
 
 # Mobile Version View
 
-<img src=https://i.imgur.com/NjzPbvZ.png width=250 height=350>   <img src=https://i.imgur.com/yu7tJWS.png width=250 height=350> <img src=https://i.imgur.com/tTnacJH.png width=250 height=350>
+<img src=https://i.imgur.com/r7rPKdF.png width=250 height=350>   <img src=https://i.imgur.com/u4YRFY0.png width=250 height=350> <img src=https://i.imgur.com/2ikoxNx.png width=250 height=350>
 
-#
+# Download & Setup Instructions In Terminal
+
+* 1 - Clone project: git clone https://github.com/quannguyen13/e-com-prt-4
+* 2 - cd e-com-prt-4
+* 3 - Create virtual environment: virtualenv myenv
+* 4 - myenv\scripts\activate
+* 5 - cd ../.. ( back to e-com-prt-4 directory )
+* 6 - python manage.py runserver
+* 7 - pip install ...(any missing module if needed)
 
 
