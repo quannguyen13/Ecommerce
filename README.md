@@ -1,5 +1,7 @@
 # Welcome to my e-commerce app project
 This e-commerce application is useable in destop version and mobile
+link below:
+https://project-4-capstone.herokuapp.com/
 # What in here.
 User able to Create, Read, Update, Delete any produts.
 Buy, Sale...simple
@@ -33,5 +35,6 @@ Buy, Sale...simple
 * 5 - cd ../.. ( back to e-com-prt-4 directory )
 * 6 - python manage.py runserver
 * 7 - pip install ...(any missing module if needed)
+* 8 - just register a dummy username and password to test CRUD on templates
 
 
