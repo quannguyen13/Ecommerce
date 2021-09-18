@@ -7,7 +7,7 @@ https://project-4-capstone.herokuapp.com/
 * User able to Create, Read, Update, Delete any produts.
 * Buy, Sale...simple
 # Features.
-* Four templates with full CRUDabilities.
+* Four templates with full CRUD-abilities.
 * Full featured shopping cart.
 * Product view.
 * Top products carousel.
@@ -18,7 +18,7 @@ https://project-4-capstone.herokuapp.com/
 * PayPal / credit card integration.
 # Tech used
 * Django frontend templates.
-* Django backend. 
+* Django backend full fuctional CRUD
 * Bulma CSS helper.
 * Postgres SQL database.
 #
