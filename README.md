@@ -22,6 +22,9 @@ https://project-4-capstone.herokuapp.com/
 * Bulma CSS helper.
 * Postgres SQL database.
 * third party storage AWS S3
+* Heroku
+* Python
+* Javascripts
 #
 <img src=https://i.imgur.com/pDlXdij.png width=800>
 
