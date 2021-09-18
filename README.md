@@ -30,8 +30,8 @@ https://project-4-capstone.herokuapp.com/
 
 # Download & Setup Instructions In Terminal.
 
-* 1 - Clone project: git clone https://github.com/quannguyen13/e-com-prt-4
-* 2 - cd e-com-prt-4
+* 1 - Clone project: git clone https://github.com/quannguyen13/Ecommerce
+* 2 - cd Ecommerce
 * 3 - Create virtual environment: virtualenv myenv
 * 4 - myenv\scripts\activate
 * 5 - cd ../.. ( back to e-com-prt-4 directory )
