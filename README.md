@@ -1,6 +1,6 @@
 # Welcome to my e-commerce app project
-This e-commerce application is useable in destop version and mobile
-link below:
+* This e-commerce application is useable in destop version and mobile
+* link below:
 https://project-4-capstone.herokuapp.com/
 # What in here.
 User able to Create, Read, Update, Delete any produts.
