@@ -16,7 +16,8 @@ Buy, Sale...simple
 * Checkout process (shipping, payment method, etc).
 * PayPal / credit card integration.
 # Tech used
-* Django.
+* Django frontend templates
+* Django backend 
 * Bulma CSS helper.
 * SQL database.
 #
