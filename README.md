@@ -1,11 +1,12 @@
-# Welcome to my e-commerce app project
-* This e-commerce application is useable in destop version and mobile
-* link below:
+# Welcome to my e-commerce app project.
+* This e-commerce application is useable in destop version and mobile.
+* link:
 https://project-4-capstone.herokuapp.com/
+* just register a dummy username and password to test CRUD on templates.
 # What in here.
 User able to Create, Read, Update, Delete any produts.
 Buy, Sale...simple
-# Features
+# Features.
 * Four templates with full CRUDabilities.
 * Full featured shopping cart.
 * Product view.
@@ -23,11 +24,11 @@ Buy, Sale...simple
 #
 <img src=https://i.imgur.com/pDlXdij.png width=800>
 
-# Mobile Version View
+# Mobile Version View.
 
 <img src=https://i.imgur.com/r7rPKdF.png width=250 height=350>   <img src=https://i.imgur.com/u4YRFY0.png width=250 height=350> <img src=https://i.imgur.com/2ikoxNx.png width=250 height=350>
 
-# Download & Setup Instructions In Terminal
+# Download & Setup Instructions In Terminal.
 
 * 1 - Clone project: git clone https://github.com/quannguyen13/e-com-prt-4
 * 2 - cd e-com-prt-4
