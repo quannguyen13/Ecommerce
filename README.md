@@ -4,8 +4,8 @@
 https://project-4-capstone.herokuapp.com/
 * just register a dummy username and password to test CRUD on templates.
 # What in here.
-User able to Create, Read, Update, Delete any produts.
-Buy, Sale...simple
+* User able to Create, Read, Update, Delete any produts.
+* Buy, Sale...simple
 # Features.
 * Four templates with full CRUDabilities.
 * Full featured shopping cart.
