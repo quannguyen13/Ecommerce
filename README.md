@@ -21,7 +21,7 @@ https://project-4-capstone.herokuapp.com/
 * Django backend full fuctional CRUD
 * Bulma CSS helper.
 * Postgres SQL database.
-* third party storage AWS S3.
+* AWS S3.
 * Heroku.
 * Python.
 * Javascripts.
