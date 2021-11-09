@@ -34,13 +34,13 @@ https://project-4-capstone.herokuapp.com/
 
 # Download & Setup Instructions In Terminal.
 
-* 1 - Clone project: git clone https://github.com/quannguyen13/Ecommerce
-* 2 - cd Ecommerce
-* 3 - Create virtual environment: virtualenv myenv
-* 4 - myenv\scripts\activate
-* 5 - cd ../.. ( back to e-com-prt-4 directory )
-* 6 - python manage.py runserver
-* 7 - pip install ...(any missing module if needed)
-* 8 - just register a dummy username and password to test CRUD on templates
+ 1 - Clone project: git clone https://github.com/quannguyen13/Ecommerce
+ 2 - cd Ecommerce
+ 3 - Create virtual environment: virtualenv myenv
+ 4 - myenv\scripts\activate
+ 5 - cd ../.. ( back to e-com-prt-4 directory )
+ 6 - python manage.py runserver
+ 7 - pip install ...(any missing module if needed)
+ 8 - just register a dummy username and password to test CRUD on templates
 
 
